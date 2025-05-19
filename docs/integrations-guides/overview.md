@@ -48,4 +48,4 @@ graph LR
 
 ```
 
-Advanced usecases might require using the clients directly. For example, ZKsync prefered to keep their [ZK Stack](./rollup-guides/zksync/README.md) sequencer as a single binary and thus didn't want to have to spin up a sidecar process. So they opted to integrate with our rust client directly in their DA dispatcher code. For most users however, we recommend making use of the EigenDA proxy. This is how [Arbitrum Nitro](./rollup-guides/orbit/overview.md) and [Op Stack](./rollup-guides/op-stack/README.md) integrations work.
+Advanced use cases might require using the clients directly. For example, zkSync preferred to keep their [ZK Stack](./rollup-guides/zksync/README.md) sequencer as a single binary and thus didn't want to have to spin up a sidecar process. Instead, they opted to integrate with our rust client directly in their DA dispatcher code. For most users however, we recommend making use of the EigenDA proxy. This is how [Arbitrum Nitro](./rollup-guides/orbit/overview.md) and [OP Stack](./rollup-guides/op-stack/README.md) integrations work.
