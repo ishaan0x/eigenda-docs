@@ -12,9 +12,9 @@ EigenDA is a high-throughput, decentralized data availability (DA) layer built o
 - **Safety failure**: The DA layer issues a valid availability certificate, but users are unable to retrieve the corresponding data.
 - **Liveness failure**: Data that should be available—i.e., properly paid for and within system throughput bounds—is not served to users.
 
-EigenDA mitigates these risks through a BFT security model backed by restaked collateral. Operators participating in the DA layer are delegated stake via EigenLayer, including ETH, EIGEN, and customized tokens.
+EigenDA mitigates these risks through a BFT security model backed by restaked collateral. Operators participating in the DA layer are delegated stake via EigenLayer, including ETH, EIGEN, and custom tokens.
 
-Additionally, EIGEN slashing introduces strong accountability: in the event of a safety failure, stake can be slashed, penalizing operators who sign availability attestations for data they do not actually serve. Extra economic alignment is also provided by token toxicity.
+Additionally, EIGEN forking introduces strong accountability: in the event of a safety failure, stake can be slashed, penalizing operators who sign availability attestations for data they do not actually serve. Extra economic alignment is also provided by token toxicity.
 
 On this page, we present a technical analysis of EigenDA's security guarantees.
 
@@ -35,7 +35,7 @@ EigenDA implements the encoding module using Reed Solomon encoding, together wit
 
 # Security Models
 
-In EigenDA, there are three different kinds of quorums where different assets (restaked-ETH, EIGEN and customized tokens of roll-ups) are delegated to the operators.  Different quorums provide different security guarantees. All three kinds of quorums must simultaneously fail for a safety attack to be successfully executed, providing multi-layered security assurance.
+In EigenDA, there are three different kinds of quorums where different assets (restaked ETH, EIGEN, and custom tokens of rollups) are delegated to the operators.  Different quorums provide different security guarantees. All three kinds of quorums must simultaneously fail for a safety attack to be successfully executed, providing multi-layered security assurance.
 
 The three security models in EigenDA, along with their corresponding quorums, are outlined below:
 
