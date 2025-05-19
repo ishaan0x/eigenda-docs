@@ -17,7 +17,7 @@ The blockchain trilemma implies that scalability, security, and decentralization
 
 EigenDA was born out the realization that this same maneuver is possible for the data availability (DA) function of a blockchain: By moving data availability to a non-blockchain structure, full scalability is possible without any compromise to security or decentralization. 
 
-In this way, EigenDA represents the completion of the Layer 2 scaling roadmap for Ethereum. Layer 2 rollups and other patterns such as EigenLayer Actively Validated Services can provide scalability for various forms of computation, while EigenDA provides scalability for DA, such that a full spectrum of applications can be securely verified at Web2 scales. 
+In this way, EigenDA represents the completion of the Layer 2 scaling roadmap for Ethereum. Layer 2 rollups and other patterns such as EigenLayer Autonomous Verifiable Services can provide scalability for various forms of computation, while EigenDA provides scalability for DA, such that a full spectrum of applications can be securely verified at Web2 scales. 
 
 EigenDA utilizes an elegant architecture that maintains optimality or near-optimality across the dimensions of performance, security, and cost: 
 
@@ -35,28 +35,24 @@ While competitors secure workloads exclusively with their own sidechain tokens, 
 
 For Ethereum-based L2s, this security approach is advantageous for several reasons: 
 
-- EigenDA feeds back into the Ethereum ecosystem by allowing Ethereum stakers to earn additional yield by restaking through EigenLayer and earning EigenDA rewards in exchange for helping secure the EigenDA protocol (As of March 2025, EigenDA has 4.3M ETH staked, or billions of dollars of economic security, at launch) This means that EigenDA helps support the economics of Ethereum as more activity migrates to Layer 2 chains.
+- EigenDA feeds back into the Ethereum ecosystem by allowing Ethereum stakers to earn additional yield by restaking through EigenLayer and earning EigenDA rewards in exchange for helping secure the EigenDA protocol. (As of March 2025, EigenDA has 4.3M ETH staked, or billions of dollars of economic security, at launch.) This means that EigenDA helps support the economics of Ethereum as more activity migrates to Layer 2 chains.
 - Because EigenDA natively uses Ethereum as a settlement layer and for operator set management, EigenDA provides enhanced security for L2s that also settle to Ethereum since these L2s do not need to rely on another chain’s bridge for safety or liveness.
 - EigenDA has unique censorship resistance properties which make it particularly suited to based rollups in Ethereum which are particularly sensitive to censorship attacks from an alternative DA solution. In particular, while competitors have consensus leaders that can censor transactions, EigenDA’s novel, leader-free design introduces little to no additional censorship vectors (Note: This feature is expected in Q2 2025).
 
 ### Unparalleled Control
 
-As an Actively Validated Service (AVS), EigenDA takes part in EigenLayer’s mission of taking the modular blockchain thesis to its completion by building a complete ecosystem of scalable and customizable verifiable cloud primitives. 
+As an Autonomous Verifiable Service (AVS), EigenDA takes part in EigenLayer’s mission of taking the modular blockchain thesis to its completion by building a complete ecosystem of scalable and customizable verifiable cloud primitives. 
 
 In principle, EigenDA represents an Archetype of an AVS which can be forked, modified, and redeployed as needed in order to support value-adding customizations for customers. In practice, due to the inherent simplicity and flexibility of the AVS format, many such customizations are available out-of-the-box. 
 
 **Pay how you want**
 
 - In ETH, EIGEN or your own native token. EigenDA is the only DA protocol which allows this kind of payment flexibility.
-- *Improve cost forecasting -* ****Purchase upfront with reserved bandwidth. While L1 blobs and Celestia are both fee markets, EigenDA offers fixed pricing and bandwidth reservations as opposed to competing with other activity on the network (which can become congested and thus slow/expensive)
+- *Improve cost forecasting -* Purchase upfront with reserved bandwidth. While L1 blobs and Celestia are both fee markets, EigenDA offers fixed pricing and bandwidth reservations as opposed to competing with other activity on the network (which can become congested and thus slow/expensive)
 
 **Customize DA security**
 
 - *Custom Quorums -* Stake your rollup’s token to secure EigenDA. EigenDA exclusively offers the ability for Rollups to secure their EigenDA usage with their native token, providing an additional layer of security.
-
-**Unlock liquidity incentives**
-
-- Attract stakers with EigenLayer’s ULIP program.
 
 # How EigenDA Works
 
@@ -91,7 +87,7 @@ The coding rate $\gamma$ characterizes the total “overhead” of the system, s
 - Safety threshold, $\eta_S$: The percentage of stake that an adversary must control to cause a safety failure.
 - Liveness threshold, $\eta_L$: The percentage of stake that an adversary must control to cause a liveness failure.
 
-The protocol must observe $1 - \eta_L - \eta_S \ge \gamma$. This means that with an adversary threshold of 54% and a liveness threshold of 33%, the total data overhead of the system can be less than 8X (See below section for comparison with other systems). 
+The protocol must observe $1 - \eta_L - \eta_S \ge \gamma$. This means that with a safety threshold of 54% and a liveness threshold of 33%, the total data overhead of the system can be less than 8X (See below section for comparison with other systems). 
 
 EigenDA makes use of KZG polynomial commitments and opening proofs generated by the disperser to enable Validator nodes, light nodes, and full nodes to validate the integrity of their shards and the correctness of the Reed Solomon encoding operation. 
 
